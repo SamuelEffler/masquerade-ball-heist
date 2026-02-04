@@ -1,4 +1,31 @@
-# Godot 4+ specific ignores
+# Godot-specific ignores
 .godot/
-/android/
-.DS_STORE
+*.import
+export_preset.cfg
+export/
+*.translation
+
+# C# / .NET / MSBuild
+bin/
+obj/
+*.sln
+*.csproj
+*.csproj.DotSettings.user
+
+# JetBrains Rider / IntelliJ
+.idea/
+*.sln.DotSettings.user
+.vs/
+
+# Mono / Nuget
+.mono/
+packages/
+*.m7g
+*.m7g.bak
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Crash logs and temporary files
+*.log
