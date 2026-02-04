@@ -5,27 +5,13 @@ export_preset.cfg
 export/
 *.translation
 
-# C# / .NET / MSBuild
-bin/
-obj/
-*.sln
-*.csproj
-*.csproj.DotSettings.user
-
 # JetBrains Rider / IntelliJ
 .idea/
-*.sln.DotSettings.user
-.vs/
-
-# Mono / Nuget
-.mono/
-packages/
-*.m7g
-*.m7g.bak
 
 # OS-specific
 .DS_Store
 Thumbs.db
+*.tmp
 
-# Crash logs and temporary files
+# Crash logs
 *.log
