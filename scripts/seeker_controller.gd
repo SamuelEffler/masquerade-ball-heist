@@ -5,7 +5,7 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			var hit = get_object_under_mouse()
 			if hit:
-				GameEvents.object_clicked.emit(hit)
+				Events.object_clicked.emit(hit)
 				print("Clicked on: ", hit.name)
 
 func get_object_under_mouse():

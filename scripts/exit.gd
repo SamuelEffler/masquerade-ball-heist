@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func complete_round():
 	set_deferred("monitoring", false)
-	GameState.switch_to_round_over(Player.Round_end_condition.THIEF_FLED)
+	GameState.switch_to_round_over(GameState.Round_end_condition.THIEF_FLED)
 
 func _on_exit_body_entered(body: Node2D) -> void:
 	timer.start()

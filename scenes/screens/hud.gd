@@ -5,7 +5,7 @@ extends CanvasLayer
 @onready var container = $LivesContainer/HBoxContainer
 
 func _ready() -> void:
-	GameEvents.lives_changed.connect(update_hearts)
+	Events.lives_changed.connect(update_hearts)
 	setup_lives(GameState.max_lives)
 	
 func setup_lives(max_lives: int) -> void:

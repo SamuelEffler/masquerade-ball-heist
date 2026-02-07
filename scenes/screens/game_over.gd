@@ -8,7 +8,7 @@ var can_continue: bool = false
 
 func _ready():
 	hide()
-	GameEvents.game_over.connect(_on_trigger_screen)
+	Events.game_over.connect(_on_trigger_screen)
 
 func _on_trigger_screen():
 	show()
@@ -28,4 +28,4 @@ func _input(event):
 
 func continue_game():
 	hide()
-	GameState.restartGame()
+	GameManager.restartGame()

@@ -7,17 +7,17 @@ var can_continue: bool = false
 
 func _ready():
 	hide()
-	GameEvents.round_over.connect(_on_trigger_screen)
+	Events.round_over.connect(_on_trigger_screen)
 
-func _on_trigger_screen(condition: Player.Round_end_condition):
+func _on_trigger_screen(condition: GameState.Round_end_condition):
 	match condition:
-		Player.Round_end_condition.SEEKER_NO_LIVES:
+		GameState.Round_end_condition.SEEKER_NO_LIVES:
 			message_label.text = "The seeker has no tries left.\nThe thief escaped with:"
 			score_label.text = str(GameState.round_score) + "$"
-		Player.Round_end_condition.THIEF_FLED:
+		GameState.Round_end_condition.THIEF_FLED:
 			message_label.text = "The thief escaped with:"
 			score_label.text = str(GameState.round_score) + "$"
-		Player.Round_end_condition.THIEF_CAUGHT:
+		GameState.Round_end_condition.THIEF_CAUGHT:
 			message_label.text = "The thief was caught.\nNothing of value was stolen."
 			score_label.text = ""
 	show()
